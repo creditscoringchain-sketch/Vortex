@@ -3,25 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Exchange</title>
+    <title>Instant Swap</title>
     <style>
-        body { background: #030308; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: sans-serif; }
-        .container { background: #0d0d1a; border: 1px solid #00f2ff33; border-radius: 24px; padding: 15px; width: 90%; max-width: 400px; text-align: center; }
-        h1 { color: #fff; font-size: 20px; margin-bottom: 20px; }
+        :root { --accent: #00f2ff; --bg: #030308; --card: #0d0d1a; --text: #ffffff; }
+        body { 
+            background: var(--bg); 
+            color: var(--text); 
+            font-family: 'Segoe UI', sans-serif; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 100vh; 
+            margin: 0;
+            background-image: radial-gradient(circle at 50% 50%, #1a1a3a 0%, #030308 100%);
+        }
+        .container { 
+            background: var(--card); 
+            border: 1px solid rgba(0, 242, 255, 0.2); 
+            border-radius: 28px; 
+            padding: 20px; 
+            width: 100%; 
+            max-width: 420px; 
+            text-align: center; 
+            box-shadow: 0 0 50px rgba(0, 242, 255, 0.1); 
+        }
+        .header h1 { 
+            font-size: 22px; 
+            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            margin: 10px 0 20px 0;
+        }
+        /* Обертка для виджета */
+        .widget-box { 
+            background: #ffffff; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            height: 550px; 
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>💎 Instant Exchange</h1>
-    
-    <iframe 
-        id="exchange-widget"
-        src="https://changenow.io/embeds/exchange/docs/widget/widget.html?FAQ=true&amount=0.1&from=btc&horizontal=false&isFiat=false&lang=ru-RU&link_id=43d3b8a0bd5fb313c1ba1852ddcbedba4b07e1f0833e4ac825de536545959aaa&logo=false&primaryColor=00f2ff&to=eth&toTheMoon=false" 
-        style="height: 550px; width: 100%; border: none; border-radius: 15px; background: #fff;" 
-        scrolling="no">
-    </iframe>
+    <div class="header">
+        <div style="font-size: 40px;">💎</div>
+        <h1>Instant Exchange</h1>
+    </div>
 
+    <div class="widget-box">
+        <iframe 
+            src="https://changenow.io/embeds/exchange/widget.html?FAQ=true&amount=0.1&from=btc&horizontal=false&isFiat=false&lang=ru-RU&link_id=43d3b8a0bd5fb313c1ba1852ddcbedba4b07e1f0833e4ac825de536545959aaa&logo=false&primaryColor=00f2ff&to=eth&toTheMoon=false" 
+            style="height: 550px; width: 100%; border: none;" 
+            scrolling="no">
+        </iframe>
+    </div>
+
+    <div style="margin-top: 15px; font-size: 11px; color: rgba(255,255,255,0.4);">
+        💎 Safe & Fast Transactions
+    </div>
 </div>
 
 </body>
