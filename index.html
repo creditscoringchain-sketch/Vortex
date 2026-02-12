@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Swap</title>
+    <title>Instant Crypto Swap</title>
     <style>
         :root { --accent: #00f2ff; --bg: #030308; --card: #0d0d1a; --text: #ffffff; }
         body { 
             background: var(--bg); 
             color: var(--text); 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-family: 'Segoe UI', sans-serif; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
@@ -19,27 +19,26 @@
         }
         .container { 
             background: var(--card); 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border: 1px solid rgba(0, 242, 255, 0.15); 
             border-radius: 28px; 
             padding: 20px; 
             width: 100%; 
             max-width: 420px; 
             text-align: center; 
-            box-shadow: 0 40px 100px rgba(0,0,0,0.8); 
+            box-shadow: 0 0 40px rgba(0, 242, 255, 0.1); 
         }
-        .header { margin-bottom: 20px; }
         .header h1 { 
-            font-size: 22px; 
+            font-size: 24px; 
             background: linear-gradient(135deg, #fff 0%, var(--accent) 100%); 
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
-            margin: 10px 0;
+            margin: 10px 0 20px 0;
         }
         .widget-box { 
-            background: rgba(0, 0, 0, 0.2); 
+            background: #ffffff; /* Белый фон для самого виджета, чтобы не было 404 */
             border-radius: 20px; 
             overflow: hidden; 
-            min-height: 550px; 
+            height: 550px; 
         }
     </style>
 </head>
@@ -47,8 +46,8 @@
 
 <div class="container">
     <div class="header">
-        <div style="font-size: 40px;">💎</div>
-        <h1>Instant Exchange</h1>
+        <div style="font-size: 45px;">💎</div>
+        <h1>Instant Swap</h1>
     </div>
 
     <div class="widget-box">
@@ -59,11 +58,10 @@
         </iframe>
     </div>
 
-    <div style="margin-top: 15px; font-size: 10px; color: rgba(255,255,255,0.3);">
-        Official Partner of ChangeNOW
+    <div style="margin-top: 15px; font-size: 11px; color: rgba(255,255,255,0.4);">
+        💎 Быстрые транзакции • Без верификации
     </div>
 </div>
 
 </body>
-          </html>
-          
+</html>
